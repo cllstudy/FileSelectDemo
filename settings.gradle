@@ -1,0 +1,3 @@
+include ':fileselectlib'
+include ':app'
+rootProject.name = "FileSelectDemo"
