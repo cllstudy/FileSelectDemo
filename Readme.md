@@ -1,5 +1,5 @@
 
-#### 请优先使用![FilePicker](https://github.com/imLibo/FilePicker/tree/master) ,本库就是FilePicker库，为什么还有这个库？只是当时的远程库版本v0.0.5_alpha对于我的项目来说不适合 功能实现不了，远程库单选文件无返回值，而作者的本地库却可以（作者的demo里换成远程库v0.0.5_alpha，也是单选无返回值），作者的本地库用在我的项目里，很多错 所以就有了这个库。本库使用AndroidX
+#### 请优先使用![FilePicker](https://github.com/imLibo/FilePicker/tree/master) ,本库就是FilePicker库，为什么还有这个库？只是当时的远程库版本v0.0.5_alpha对于我的项目来说不适合 功能实现不了，远程库单选文件无返回值(设置isSingle属性)，而作者的本地库却可以（作者的demo里换成远程库v0.0.5_alpha，也是单选无返回值），作者的本地库用在我的项目里，很多错 所以就有了这个库。本库使用AndroidX
 
 
 
