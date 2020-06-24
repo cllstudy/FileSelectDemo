@@ -8,6 +8,7 @@ import android.webkit.MimeTypeMap;
 
 import androidx.annotation.IntDef;
 
+import com.cll.fileselectlib.R;
 import com.cll.fileselectlib.model.BreadModel;
 
 import java.io.BufferedInputStream;
@@ -86,14 +87,15 @@ public final class FileUtils {
      * @param path        路径名
      * @return 面包屑导航列表
      */
-    public static List<BreadModel> getBreadModeListFromPath(List<String> mSdCardList, String path) {
+    public static List<BreadModel> getBreadModeListFromPath(Context context,List<String> mSdCardList, String path) {
         List<String> pathList = new ArrayList<>();
         for (int i = 0; i < mSdCardList.size(); i++) {
             if (i == 0) {
                 //内部存储设备
-                path = path.replace(mSdCardList.get(i), "/内部存储设备");
+
+                path = path.replace(mSdCardList.get(i), context.getString(R.string.internal_storage));
             } else {
-                path = path.replace(mSdCardList.get(i), "/SD卡" + i);
+                path = path.replace(mSdCardList.get(i), context.getString(R.string.sd_card) + i);
             }
         }
         if (!TextUtils.isEmpty(path)) {

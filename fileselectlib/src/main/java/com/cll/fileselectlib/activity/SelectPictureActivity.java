@@ -192,7 +192,7 @@ public class SelectPictureActivity extends AppCompatActivity implements EssAlbum
         if (view.getId() == R.id.check_view) {
             if (mSelectedFileList.size() >= SelectOptions.getInstance().maxCount && !item.isChecked()) {
                 mMediaAdapter.notifyItemChanged(position, "");
-                Snackbar.make(mRecyclerView, "您最多只能选择" + SelectOptions.getInstance().maxCount + "个。", Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(mRecyclerView, getString(R.string.you_max_select) + SelectOptions.getInstance().maxCount +getString(R.string.text_one), Snackbar.LENGTH_SHORT).show();
                 return;
             }
             boolean addSuccess = mSelectedFileList.add(mMediaAdapter.getItem(position));

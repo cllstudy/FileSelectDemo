@@ -78,7 +78,7 @@
             android:drawablePadding="8dp"
             android:drawableTop="@drawable/ic_photo_camera_white_24dp"
             android:gravity="center"
-            android:text="拍一张"
+            android:text="@string/take_a_pic"
             android:textSize="14sp"
             />
 

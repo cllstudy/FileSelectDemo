@@ -99,7 +99,7 @@ public class SelectFileByBrowserActivity extends AppCompatActivity
     private void initUi() {
         mToolBar = findViewById(R.id.toolbar);
         setSupportActionBar(mToolBar);
-        getSupportActionBar().setTitle("文件选择");
+        getSupportActionBar().setTitle(R.string.file_select);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         mToolBar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -153,7 +153,7 @@ public class SelectFileByBrowserActivity extends AppCompatActivity
         }
         mCurFolder = queryPath;
         mAdapter.setNewData(fileList);
-        List<BreadModel> breadModelList = FileUtils.getBreadModeListFromPath(mSdCardList, mCurFolder);
+        List<BreadModel> breadModelList = FileUtils.getBreadModeListFromPath(SelectFileByBrowserActivity.this,mSdCardList, mCurFolder);
         if (mHasChangeSdCard) {
             mBreadAdapter.setNewData(breadModelList);
             mHasChangeSdCard = false;
@@ -254,7 +254,7 @@ public class SelectFileByBrowserActivity extends AppCompatActivity
                 } else {
                     if (mSelectedFileList.size() >= SelectOptions.getInstance().maxCount) {
                         //超出最大可选择数量后
-                        Snackbar.make(mRecyclerView, "您最多只能选择" + SelectOptions.getInstance().maxCount + "个。", Snackbar.LENGTH_SHORT).show();
+                        Snackbar.make(mRecyclerView, getString(R.string.you_max_select) + SelectOptions.getInstance().maxCount + getString(R.string.text_one), Snackbar.LENGTH_SHORT).show();
                         return;
                     }
                     mSelectedFileList.add(item);
@@ -344,7 +344,7 @@ public class SelectFileByBrowserActivity extends AppCompatActivity
                             mSelectSortTypeIndex = which;
                         }
                     })
-                    .setNegativeButton("降序", new DialogInterface.OnClickListener() {
+                    .setNegativeButton(R.string.descending_order, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             switch (mSelectSortTypeIndex) {
@@ -366,7 +366,7 @@ public class SelectFileByBrowserActivity extends AppCompatActivity
                             executeListTask(mSelectedFileList, mCurFolder, SelectOptions.getInstance().getFileTypes(), SelectOptions.getInstance().getSortType());
                         }
                     })
-                    .setPositiveButton("升序", new DialogInterface.OnClickListener() {
+                    .setPositiveButton(R.string.ascending_order, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             switch (mSelectSortTypeIndex) {
@@ -388,7 +388,7 @@ public class SelectFileByBrowserActivity extends AppCompatActivity
                             executeListTask(mSelectedFileList, mCurFolder, SelectOptions.getInstance().getFileTypes(), SelectOptions.getInstance().getSortType());
                         }
                     })
-                    .setTitle("请选择")
+                    .setTitle(R.string.please_select)
                     .show();
 
         }
