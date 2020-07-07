@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">FilePicker</string>
+    <string name="folder_desc">文件:%1$s&#160;&#160;|&#160;&#160;文件夹:%2$s</string>
+    <string name="file_desc">%1$s&#160;&#160;|&#160;&#160;%2$s</string>
+    <string name="selected_file_count">选中(%1$s/%2$s)</string>
+    <string-array name="sort_list">
+        <item>按名称</item>
+        <item>按时间</item>
+        <item>按大小</item>
+        <item>按类型</item>
+    </string-array>
+    <string-array name="sort_list_scan">
+        <item>按名称</item>
+        <item>按时间</item>
+        <item>按大小</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_all">全部</string>
+    <string name="empty">空</string>
+    <string name="take_a_pic">拍一张</string>
+    <string name="loading">正在加载</string>
+    <string name="select">选中(0)</string>
+    <string name="sort">排序</string>
+    <string name="you_max_select">您最多只能选择</string>
+    <string name="text_one">个。</string>
+    <string name="file_select">文件选择</string>
+    <string name="descending_order">降序</string>
+    <string name="ascending_order">升序</string>
+    <string name="please_select">请选择</string>
+    <string name="internal_storage">/内部存储设备</string>
+    <string name="sd_card">/SD卡</string>
+</resources>
