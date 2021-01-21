@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">FilePicker</string>
     <string name="folder_desc">File:%1$s&#160;&#160;|&#160;&#160;Folder:%2$s</string>
     <string name="file_desc">%1$s&#160;&#160;|&#160;&#160;%2$s</string>
     <string name="selected_file_count">Selected(%1$s/%2$s)</string>
